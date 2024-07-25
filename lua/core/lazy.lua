@@ -20,11 +20,11 @@ function lazy.setup()
 		{
 			"nvim-telescope/telescope.nvim",
 			branch = "0.1.x",
-			dependencies = {
+			--[[dependencies = {
 				{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 				"nvim-tree/nvim-web-devicons",
 				"folke/todo-comments.nvim",
-			},
+			},]]
 			config = function()
 				require('plugins.telescope_config').setup()
 			end
@@ -39,9 +39,9 @@ function lazy.setup()
 		{
 			"nvim-treesitter/nvim-treesitter",
 			build = ":TSUpdate",
-			config = function()
-				require('plugins.treesitter_config').setup()
-			end
+		},
+		{
+			"42Paris/42header"
 		},
 	})
 end

@@ -6,7 +6,8 @@ vim.g.maplocalleader = ' '
 function keymaps.utils()
 	vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
 	vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-	vim.keymap.set("n", "<leader>ex", ":Ex<CR>", { desc = "Open exploration menu" })
+	vim.keymap.set("n", "<leader>bf", ":Ex<CR>", { desc = "[B]rowse [F]iles" })
+	vim.keymap.set("n", "<leader>h", ":Stdheader<CR>", { desc = "42 [H]eader" })
 end
 
 -- Keybinds to make split navigation easier.
@@ -20,10 +21,9 @@ end
 
 -- window management
 function keymaps.window()
-	vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
-	vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
-	vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
-	vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
+	vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "[S]plit window [V]ertically" })
+	vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "[S]plit window [F]orizontally" })
+	vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make [S]plits [E]qual size" })
 end
 
 function keymaps.setup()
