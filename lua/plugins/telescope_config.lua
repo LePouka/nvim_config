@@ -5,6 +5,10 @@ local actions = require('telescope.actions')
 function telescope_config_lua.setup()
 	telescope.setup{ 
 		defaults = {
+			prompte_prefix = "🔍 ",
+			selection_caret = "➜ ",
+			entry_prefix = "  ",
+
 			mappings = {
 				i = {
 					["<C-h>"] = actions.which_key,
