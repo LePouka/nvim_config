@@ -1,8 +1,5 @@
 local keymaps = {}
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 function keymaps.utils()
 	vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
 	vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })

@@ -15,16 +15,14 @@ local lazy = {}
 function lazy.setup()
 	require("lazy").setup({
 		{
-			"nvim-lua/plenary.nvim",
-		},
-		{
 			"nvim-telescope/telescope.nvim",
 			branch = "0.1.x",
-			--[[dependencies = {
+			dependencies = {
+				"nvim-lua/plenary.nvim",
 				{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 				"nvim-tree/nvim-web-devicons",
 				"folke/todo-comments.nvim",
-			},]]
+			},
 			config = function()
 				require('plugins.telescope_config').setup()
 			end

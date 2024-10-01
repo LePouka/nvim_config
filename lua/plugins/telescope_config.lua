@@ -13,7 +13,18 @@ function telescope_config_lua.setup()
 				}
 			}
 		},
+
+		extensions = {
+			fzf = {
+				fuzzy = true,
+				override_generic_sorter = true,
+				override_file_sorter = true,
+				case_mode = "smart_case",
+			}
+		}
 	}
+
+	telescope.load_extension('fzf')
 
 	local keymap = vim.keymap
 	local builtin = require('telescope.builtin')
