@@ -8,7 +8,7 @@ function telescope_config_lua.setup()
 			prompte_prefix = "🔍 ",
 			selection_caret = "➜ ",
 			entry_prefix = "  ",
-			path_display = { "smart" },
+			path_display = { "shorten" },
 
 			mappings = {
 				i = {
