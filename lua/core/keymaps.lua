@@ -3,7 +3,7 @@ local keymaps = {}
 function keymaps.utils()
 	vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
 	vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-	vim.keymap.set("n", "<leader>bf", ":Ex<CR>", { desc = "[B]rowse [F]iles" })
+	vim.keymap.set("n", "<leader>ex", ":Ex<CR>", { desc = "File [EX]plorer" })
 	vim.keymap.set("n", "<leader>h", ":Stdheader<CR>", { desc = "42 [H]eader" })
 end
 
