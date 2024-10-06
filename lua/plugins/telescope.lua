@@ -3,17 +3,14 @@ return {
 	branch = "0.1.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"nvim-telescope/telescope-file-browser.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
-		"nvim-telescope/telescope-project.nvim",
 		"folke/todo-comments.nvim",
 	},
 
 	config = function()
 		local telescope = require('telescope')
 		local actions = require('telescope.actions')
-		local fb_actions = telescope.extensions.file_browser.actions
 
 		telescope.setup{ 
 			defaults = {
@@ -43,15 +40,6 @@ return {
 			},
 
 			extensions = {
-				file_browser = {
-					hidden = true,
-					respect_gitignore = true,
-					hijakck_netrw = true,
-					["i"] = {
-						["<A-t>"] = fb_actions.change_cwd,
-						["<C-t>"] = actions.select_tab,
-					},
-				},
 				fzf = {
 					fuzzy = true,
 					override_generic_sorter = true,
@@ -61,9 +49,7 @@ return {
 			}
 		}
 
-		telescope.load_extension('file_browser')
 		telescope.load_extension('fzf')
-		telescope.load_extension('project')
 
 		local keymap = vim.keymap
 		local builtin = require('telescope.builtin')
