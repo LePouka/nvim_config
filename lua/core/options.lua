@@ -31,6 +31,8 @@ function options.setup()
 	vim.opt.softtabstop = 4
 	vim.opt.expandtab = false
 	vim.opt.hlsearch = true
-end
+	vim.opt.guifont = "JetBrainsMonoNL Nerd Font:h12"
 
-return options
+	end
+
+	return options
