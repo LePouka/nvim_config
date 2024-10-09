@@ -1,4 +1,5 @@
 require('core.options').setup()
 require('core.keymaps').setup()
 require('core.autocommands').setup()
+require('core.cpp_class')
 require('core.lazy').setup()
