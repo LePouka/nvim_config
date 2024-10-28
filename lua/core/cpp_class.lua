@@ -7,14 +7,14 @@ local function Class(ClassName)
 	vim.fn.mkdir(source_dir, 'p')
 
 	-- Editing the source file in the 'srcs/class' folder
-	vim.cmd("vsp " .. source_dir .. ClassName .. ".cpp")
+	vim.cmd("e " .. source_dir .. ClassName .. ".cpp")
 
 	-- Insert content into the source file
 	local source_content = [[
 /******************************************************************************/
 /*   INCLUDES                                                                 */
 /******************************************************************************/
-#include "../incs/]] .. ClassName .. [[.hpp"
+#include "]] .. ClassName .. [[.hpp"
 
 /******************************************************************************/
 /*   CONSTRUCTORS / DESTRUCTORS                                               */
@@ -28,7 +28,7 @@ local function Class(ClassName)
 /******************************************************************************/
 /*   OPERATORS                                                                */
 /******************************************************************************/
-]] .. ClassName .. [[& ]] .. ClassName .. [[::operator=( ]] .. ClassName .. [[ const & rhs ) {
+]] .. ClassName .. [[&	]] .. ClassName .. [[::operator=( ]] .. ClassName .. [[ const & rhs ) {
 
 	if ( this != &rhs ) {
 
@@ -49,7 +49,7 @@ local function Class(ClassName)
 /******************************************************************************/
 /*   EXTERNAL FUNCTIONS                                                       */
 /******************************************************************************/
-std::ostream& operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs ) {
+std::ostream&	operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs ) {
 
 	o << "]] .. ClassName .. [[ redirection operator not set";
 
@@ -67,7 +67,7 @@ std::ostream& operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs ) {
 	vim.fn.mkdir(header_dir, 'p') -- Create the directory if it doesn't exist
 
 	-- Editing the header file in the 'incs' folder
-	vim.cmd("e " .. header_dir .. ClassName .. ".hpp")
+	vim.cmd("vsp " .. header_dir .. ClassName .. ".hpp")
 
 	-- Insert content into the header file
 	local header_content = [[
@@ -113,7 +113,7 @@ public:
 /******************************************************************************/
 /*   EXTERNAL FUNCTIONS                                                       */
 /******************************************************************************/
-std::ostream& operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs );]]
+std::ostream&	operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs );]]
 
 	-- Insert header content
 	vim.api.nvim_buf_set_lines(0, 0, -1, false, vim.split(header_content, "\n"))
