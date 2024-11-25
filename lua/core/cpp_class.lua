@@ -17,10 +17,7 @@ local function Class(ClassName)
 
 ]] .. ClassName .. [[&	]] .. ClassName .. [[::operator=( ]] .. ClassName .. [[ const & rhs ) {
 
-	if ( this != &rhs ) {
-
-		// assign members
-	}
+	if ( this != &rhs ) {}
 
 	return *this;
 }
@@ -60,19 +57,11 @@ private:
 protected:
 
 public:
-	// Constructors / Destructor
 	]] .. ClassName .. [[( void ) {}
 	]] .. ClassName .. [[( ]] .. ClassName .. [[ const & src );
 	virtual ~]] .. ClassName .. [[( void ) {}
 
-	// Operators
 	]] .. ClassName .. [[&	operator=( ]] .. ClassName .. [[ const & rhs );
-
-	// Accessors
-
-	// Methods
-
-	// Exception classes
 
 };
 
