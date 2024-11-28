@@ -24,6 +24,7 @@ return {
 				"python",
 				"rust",
 				"yaml",
+				"toml",
 			},
 			ignore_install = {},
 			highlight = { enable = true },
