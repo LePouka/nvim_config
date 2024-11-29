@@ -13,7 +13,11 @@ local function Class(ClassName)
 	local source_content = [[
 #include "]] .. ClassName .. [[.hpp"
 
+]] .. ClassName .. [[::]] .. ClassName .. [[( void ) {}
+
 ]] .. ClassName .. [[::]] .. ClassName .. [[( ]] .. ClassName .. [[ const & src ) {}
+
+]] .. ClassName .. [[::~]] .. ClassName .. [[( void ) {}
 
 ]] .. ClassName .. [[&	]] .. ClassName .. [[::operator=( ]] .. ClassName .. [[ const & rhs ) {
 
@@ -57,9 +61,9 @@ private:
 protected:
 
 public:
-	]] .. ClassName .. [[( void ) {}
+	]] .. ClassName .. [[( void );
 	]] .. ClassName .. [[( ]] .. ClassName .. [[ const & src );
-	virtual ~]] .. ClassName .. [[( void ) {}
+	virtual ~]] .. ClassName .. [[( void );
 
 	]] .. ClassName .. [[&	operator=( ]] .. ClassName .. [[ const & rhs );
 
