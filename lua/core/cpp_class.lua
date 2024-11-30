@@ -52,7 +52,6 @@ std::ostream&	operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs ) {
 
 #include <iostream>
 #include <string>
-#include <exception>
 
 class ]] .. ClassName .. [[ {
 
