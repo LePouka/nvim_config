@@ -20,14 +20,12 @@ local function Class(ClassName)
 ]] .. ClassName .. [[::~]] .. ClassName .. [[( void ) {}
 
 ]] .. ClassName .. [[&	]] .. ClassName .. [[::operator=( ]] .. ClassName .. [[ const & rhs ) {
-
 	if ( this != &rhs ) {}
 
 	return *this;
 }
 
 std::ostream&	operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs ) {
-
 	o << "]] .. ClassName .. [[ redirection operator not set";
 
 	return o;
@@ -54,7 +52,6 @@ std::ostream&	operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs ) {
 #include <string>
 
 class ]] .. ClassName .. [[ {
-
 private:
 
 protected:
@@ -65,7 +62,6 @@ public:
 	virtual ~]] .. ClassName .. [[( void );
 
 	]] .. ClassName .. [[&	operator=( ]] .. ClassName .. [[ const & rhs );
-
 };
 
 std::ostream&	operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs );]]
