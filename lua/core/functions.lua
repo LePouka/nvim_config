@@ -54,8 +54,6 @@ std::ostream&	operator<<( std::ostream& o, ]] .. ClassName .. [[ const & rhs ) {
 class ]] .. ClassName .. [[ {
 private:
 
-protected:
-
 public:
 	]] .. ClassName .. [[( void );
 	]] .. ClassName .. [[( ]] .. ClassName .. [[ const & src );
