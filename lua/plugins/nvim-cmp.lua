@@ -21,10 +21,10 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				['<Tab>'] = cmp.mapping.confirm({ select = true }),
-				['<S-Tab>'] = cmp.mapping.abort(),
-				['<C-j>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-				['<C-k>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+				['<Right>'] = cmp.mapping.confirm({ select = true }),
+				['<Left>'] = cmp.mapping.abort(),
+				['<Down>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+				['<Up>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 				['<C-Space>'] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
