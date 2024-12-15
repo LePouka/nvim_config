@@ -20,6 +20,10 @@ return {
 					luasnip.lsp_expand(args.body)
 				end,
 			},
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
+			},
 			mapping = cmp.mapping.preset.insert({
 				['<Right>'] = cmp.mapping.confirm({ select = true }),
 				['<Left>'] = cmp.mapping.abort(),
